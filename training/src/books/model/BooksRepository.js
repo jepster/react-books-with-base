@@ -7,13 +7,13 @@ export default class BooksRepository{
 
     create = (title, price, available) => {
         let isbn = "ISBN" + this.counter++
-        console.log(isbn)
+        console.log('new book created. counter' + this.counter)
         let newBook = new Book(isbn, title, price, available)
-        this.books[isbn] = newBook
+        this.books.set(isbn, newBook)
         return newBook
     }
     findByIsbn = (isbn) => this.books[isbn]
-    findAll = () => this.books.values()
+    findAll = () => Array.from(this.books.values())
     updatePrice = (isbn, price) => this.findByIsbn(isbn).price = price
     deleteByIsbn = (isbn) => delete this.books.isbn
 

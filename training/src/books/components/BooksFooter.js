@@ -5,11 +5,10 @@ import Clock from '../../util/components/Clock';
 export default function BooksFooter() {
     return (
       <>
-      <p className={styles.background}>Javacream</p>
+      <p className={styles.background}>publicplan</p>
       <ClockFunctionalComponent />
       <ClockClassComponent />
       <Clock />
       </>
     );
   }
-  
